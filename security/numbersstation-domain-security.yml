@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: probed
+source: dig + TLS handshake probe (numbersstation.ai)
+note: >-
+  The apex host numbersstation.ai (WP Engine, 141.193.213.10/11) currently
+  refuses the TLS handshake for every client probed (system curl/LibreSSL,
+  Python urllib, headless Chromium via reader proxy) with
+  ERR_SSL_VERSION_OR_CIPHER_MISMATCH, so HTTPS reachability/HSTS/cert could
+  not be captured. DNS-level records were probed directly with dig.
+hosts:
+  - host: numbersstation.ai
+    https: false
+    tls_version: null
+    tls_error: ERR_SSL_VERSION_OR_CIPHER_MISMATCH
+    hsts: null
+    hsts_max_age: null
+domains:
+  - domain: numbersstation.ai
+    dnssec: false
+    caa: []
+    spf: false
+    dmarc: false
+    dmarc_policy: null
+    mx: google-workspace
